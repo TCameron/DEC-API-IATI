@@ -19,7 +19,6 @@ now = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3]+'Z'
 # Method to combine the data downloaded from the DEC website into a single file
 def concat(firstyear, lastyear):
     print("Combining files...")
-    filename = ""
     for j in range(firstyear, (lastyear+1)):
         filename = "export/" + time.strftime("%m-%d-%Y") + "/DEC_Data_From_" + str(j) + ".csv"
         with open(filename) as fin:
